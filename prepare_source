@@ -1,1 +1,2 @@
-apt_src socat
+apt_src socat=1.8.1.3-2
+version_suffix=gl0~bp2150
