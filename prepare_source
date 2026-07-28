@@ -1,11 +1,7 @@
 pkg=socat
+# socat does not have it's source code within sales. Making checking out difficult, however, we can
+# fetch the release from a newer snapshot instead. GL2300 has the latest version placed. 
 version_orig="1.8.1.3-2"
-
-snapshot_gl_version="1784318895" # Start searching from this GL nightly version and search forward 30 versions
-#snapshot=$(pkg_version_in_gl_version "$pkg" "$version_orig" "$snapshot_gl_version" 1)
-
-# Get sources from snapshot
+snapshot_gl_version="1784318895"  #That's the timestamp from GL2300.
 snapshot_src "$pkg" "$snapshot_gl_version"
-# We moved the gl0 to the version_orig to have match, otherwise the pkg_version_in_gl_version won't
-# find it.
 version_suffix="gl0~bp1877"
